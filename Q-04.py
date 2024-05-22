@@ -131,3 +131,23 @@
 # Your score is now 2
 
 # Good job, you played really well!
+
+
+#* PSEUDO CODE:
+# Milestone #1: Generate the random numbers
+
+# Generate the random numbers for you and the computer. For now, print both of them out to help you test the logic in later milestones.
+
+# Welcome to the High-Low Game!
+# --------------------------------
+# The computer's number is 23
+# Your number is 82
+import random
+computer_number = random.randint(1 , 100)
+user_number = random.randint(1 , 100)
+
+print('Welcome to the High-Low Game!')
+print('-----------------------------')
+
+print(f"The computer's number is  {computer_number}")
+print(f"Your number is  {user_number}")
