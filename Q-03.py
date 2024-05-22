@@ -16,34 +16,6 @@
 
 # # This would print out out 3.14
 
-# x = 2.71828
-# rounded_x = round(x, 4)
-# print(rounded_x)
-
-# # This would print out 2.7183
-
-# x = 3
-# rounded_x = round(x, 4)
-# print(rounded_x) 
-
-# # This would print 3
-# # Note that the round function does not add on decimal places that are not there already 
-
-# Sample Run
-
-# $ python marsweight.py
-
-# Enter a weight on Earth: 120
-
-# The equivalent on Mars: 45.36 
-
-# Sample Run
-
-# $ python marsweight.py
-
-# Enter a weight on Earth: 186
-
-# The equivalent on Mars: 70.31
 
 # Milestone #2: Adding in All Planets
 
@@ -97,3 +69,35 @@
 
 # if x == y:
 # print("x and y are equal!")
+
+
+#* MILESTONE 01 PROBLEM :  MARS WEIGHT
+
+# TAKE AN INPUT FROM THE USER TO ENTER WEIGHT.
+# CONVERT THE WEIGHT ON EARTH INTO WEIGHT ON MARS.
+# THE WEIGHT OF MARS IS 37.8% OF WEIGHT ON EARTH
+# ROUND THE RESULT INTO 2 DECIMAL PLACES.
+
+#? PSUEDO CODE :
+
+# USER INPUT = FLOAT('ENTER A WEIGHT ON EARTH') 20
+# WEIGHT ON MARS = 37.8%
+# CALCULATION : 37.8 / 100 = 0.378
+# CALCULATED VALUE = ROUND(USER WEIGHT * 0.378 , 2 )
+# PRINT('THE EQUIVALENT WEIGHT ON MARS:' + CALCULATED VALUE)
+
+#* CODE
+
+Mars_weight = 0.378
+# WE USED FLOAT FOR CONVERTING THE DEFAULT STRING VALUE INTO FLOAT VALUE.
+weight_on_Earth = float(input('Enter a weight on Earth '))
+weight_on_Mars = round(weight_on_Earth * Mars_weight , 2)
+# F ALLOW US TO USE EXPRESSIONS INSIDE THE STRING.
+print(f'The equivalent weight on Mars: {weight_on_Mars}')
+
+
+
+
+
+#* MILESTONE 02 PROBLEM :
+
