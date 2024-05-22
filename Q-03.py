@@ -98,9 +98,6 @@ weight_on_Mars = round(weight_on_Earth * Mars_weight , 2)
 print(f'The equivalent weight on Mars: {weight_on_Mars}')
 
 print('\n')
-print('\n')
-print('\n')
-
 
 
 
@@ -137,6 +134,8 @@ print('\n')
 
 #* CODE :
 
+print('Milestone : 02')
+
 # STORED VALUES IN EACH CONSTANT
 Mercury , Venus , Mars , Jupiter , Saturn , Uranus , Neptune = 0.376 , 0.889 , 0.378 , 2.36 , 1.081 , 0.815 , 1.14
 
@@ -144,35 +143,35 @@ weight_on_Earth = float(input('Enter weight on Earth: '))
 
 planet = input('Enter a Planet: ')
 
-if(planet == 'Mercury'):
+if planet == 'Mercury':
     weight_on_Mercury = round(weight_on_Earth * Mercury , 2 )
     print(f'The equivalent weight on Mercury: {weight_on_Mercury} ')
 
-elif(planet == 'Venus'):
+elif planet == 'Venus':
     weight_on_Venus = round(weight_on_Earth * Venus , 2 )
     print(f'The equivalent weight on Venus: {weight_on_Venus} ')
 
-elif(planet == 'Mars'):
+elif planet == 'Mars':
     weight_on_Mars = round(weight_on_Earth * Mars , 2 )
     print(f'The equivalent weight on Mars: {weight_on_Mars} ')
 
 
-elif(planet == 'Jupiter'):
+elif planet == 'Jupiter':
     weight_on_Jupiter = round(weight_on_Earth * Jupiter , 2 )
     print(f'The equivalent weight on Jupiter: {weight_on_Jupiter} ')
 
 
-elif(planet == 'Saturn'):
+elif planet == 'Saturn':
     weight_on_Saturn = round(weight_on_Earth * Saturn , 2 )
     print(f'The equivalent weight on Saturn: {weight_on_Saturn} ')
 
 
-elif(planet == 'Uranus'):
+elif planet == 'Uranus':
     weight_on_Uranus = round(weight_on_Earth * Uranus , 2 )
     print(f'The equivalent weight on Uranus: {weight_on_Uranus} ')
 
 
-elif(planet == 'Neptune'):
+elif planet == 'Neptune':
     weight_on_Neptune = round(weight_on_Earth * Neptune , 2 )
     print(f'The equivalent weight on Neptune: {weight_on_Neptune} ')
 else:
