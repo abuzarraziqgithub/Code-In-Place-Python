@@ -134,7 +134,8 @@
 
 
 #* PSEUDO CODE:
-# Milestone #1: Generate the random numbers
+
+#? Milestone #1: Generate the random numbers
 
 # Generate the random numbers for you and the computer. For now, print both of them out to help you test the logic in later milestones.
 
@@ -142,12 +143,82 @@
 # --------------------------------
 # The computer's number is 23
 # Your number is 82
+#! import random
+#* computer_number = random.randint(1 , 100)
+#* user_number = random.randint(1 , 100)
+
+#* print('Welcome to the High-Low Game!')
+#* print('-----------------------------')
+
+#* print(f"Your number is  {user_number}")
+
+
+#? Milestone #2: Get the user choice
+
+# Get user input for their choice of whether they think their number is higher or lower than the computer's number.
+
+# Welcome to the High-Low Game!
+# --------------------------------
+# The computer's number is 7
+# Your number is 17
+# Do you think your number is higher or lower than the computer's?: higher
+
+#* choice = input("Do you think your number is higher or lower than computer's?: ")
+
+
+#? Milestone #3: Write the game logic
+
+# Write code that maps out all the ways to win the round and prints out the results. When does the user win? How might we check for this? (Note: If you and the computer share the same number, the computer should win since your number wouldn't be higher nor lower.)
+
+# Welcome to the High-Low Game!
+# --------------------------------
+# The computer's number is 79
+# Your number is 3
+# Do you think your number is higher or lower than the computer's?: lower
+# You were right! The computer's number was 79
+
+#* if(choice == 'higher' and user_number > computer_number) or (choice == 'lower' and user_number < computer_number):
+    #* print(f"You were right! The computer's number was {computer_number}")
+#* else:
+    #*print(f"Aww, that's incorrect. The computer's number was {computer_number }")
+
+#? Milestone #4: Play multiple rounds
+
+# Milestones 1-3 make up a single round of the game. Now that your game logic is sound, you can remove the line printing out the computer's number. Next, write code to play multiple rounds of the game! How many rounds should they play you ask? We've provided you with the NUM_ROUNDS constant. NUM_ROUNDS is the number of rounds you should have the user play. For reference, in the first example, we had NUM_ROUNDS = 3. After each round, add a blank line to separate the rounds visually. Make sure to print out the round number as well!
+
+# Welcome to the High-Low Game!
+# --------------------------------
+# Round 1
+# Your number is 22
+# Do you think your number is higher or lower than the computer's?: lower
+# You were right! The computer's number was 23
+
+# Round 2
+# Your number is 76
+# Do you think your number is higher or lower than the computer's?: higher
+# Aww, that's incorrect. The computer's number was 81
+
 import random
-computer_number = random.randint(1 , 100)
-user_number = random.randint(1 , 100)
 
-print('Welcome to the High-Low Game!')
-print('-----------------------------')
-
-print(f"The computer's number is  {computer_number}")
-print(f"Your number is  {user_number}")
+NUM_ROUNDS = 3
+score = 0
+for count in range(NUM_ROUNDS):
+    computer_number = random.randint(1 , 100)
+    user_number = random.randint(1 , 100)
+    print(f'Round {count + 1}')
+    print('Welcome to the High-Low Game!')
+    print('-----------------------------')
+    
+    print(f"Your number is  {user_number}")
+    
+    choice = input("Do you think your number is higher or lower than computer's?: ")
+    
+    if(choice == 'higher' and user_number > computer_number) or (choice == 'lower' and user_number < computer_number):
+        print(f"You were right! The computer's number was {computer_number}")
+        +score
+        print(f"Your score is now {score}")
+    elif(choice != 'higher' or choice != 'lower'):
+        print('Please enter either higher or lower')
+    else:
+       print(f"Aww, that's incorrect. The computer's number was {computer_number }")
+    print('\n')
