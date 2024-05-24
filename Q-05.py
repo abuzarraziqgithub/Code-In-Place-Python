@@ -27,3 +27,47 @@
 #* Draw circles of a random size 
 
 #* Draw the circles such that all parts of the circle are within the canvas 
+
+
+
+
+import random
+import tkinter as tk
+
+# Constants
+N_CIRCLES = 20
+CANVAS_WIDTH = 800
+CANVAS_HEIGHT = 600
+CIRCLE_SIZE = 50
+
+def random_color():
+    colors = ['blue', 'purple', 'salmon', 'lightblue', 'cyan', 'forestgreen']
+    return random.choice(colors)
+
+def draw_random_circle(canvas):
+    for _ in range(N_CIRCLES):
+        # Generate random size for the circle
+        circle_size = random.randint(20, CIRCLE_SIZE)
+
+        # Generate random position, ensuring the circle fits within the canvas
+        x0 = random.randint(0, CANVAS_WIDTH - circle_size)
+        y0 = random.randint(0, CANVAS_HEIGHT - circle_size)
+        x1 = x0 + circle_size
+        y1 = y0 + circle_size
+
+        # Get random color
+        color = random_color()
+
+        # Draw the circle on the canvas
+        canvas.create_oval(x0, y0, x1, y1, fill=color, outline=color)
+
+# Create the Tkinter window and canvas
+window = tk.Tk()
+canvas = tk.Canvas(window, width=CANVAS_WIDTH, height=CANVAS_HEIGHT)
+canvas.pack()
+
+# Draw the random circles
+draw_random_circle(canvas)
+
+# Run the Tkinter event loop
+window.mainloop()
