@@ -1,0 +1,49 @@
+import random
+
+NUM_ROUNDS = 5
+print("Welcome to the High-Low Game!")
+print('--------------------------------')
+
+curr_round = 1
+score = 0
+
+while curr_round <= NUM_ROUNDS:
+        print("Round", curr_round)
+        
+        my_num = random.randint(1, 100) 
+        computer_num = random.randint(1, 100)
+        #generate the 2 random numbers
+
+        print("Your number is", my_num)
+
+        user_guess = input("Do you think your number is higher or lower than the computer's?: ")
+        #take user input
+        
+        correct = "You were right! The computer's number was"
+        incorrect = "Aww, that's incorrect. The computer's number was"
+        # results
+
+        if user_guess == "higher":
+            if my_num > computer_num:
+                print(correct, computer_num)
+                
+                score += 1
+                print("Your score is now", score)
+            
+            else:
+                print(incorrect, computer_num)
+        
+        if user_guess == "lower":
+            if my_num < computer_num:
+                print(correct, computer_num)
+                
+                score += 1
+                print("Your score is now", score)
+            
+            else:
+                print(incorrect, computer_num)       
+
+        print(" ")
+        curr_round += 1
+
+print("Thanks for playing!")
