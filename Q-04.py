@@ -198,6 +198,24 @@
 # Do you think your number is higher or lower than the computer's?: higher
 # Aww, that's incorrect. The computer's number was 81
 
+
+#? Milestone #5: Adding a points system
+
+# Keep track of the player's score! You should print out the player's score after each round. After this step, you will have coded up the entire game!
+
+# Extension #1: Safeguard user input
+
+# Get user input for their choice of whether they think their number is higher or lower than the computer's number.
+
+# Welcome to the High-Low Game!
+# --------------------------------
+# Round 1
+# Your number is 1
+# Do you think your number is higher or lower than the computer's?: even
+# Please enter either higher or lower: lower
+# You were right! The computer's number was 6
+# Your score is now 1
+
 import random
 
 NUM_ROUNDS = 3
@@ -213,12 +231,5 @@ for count in range(NUM_ROUNDS):
     
     choice = input("Do you think your number is higher or lower than computer's?: ")
     
-    if(choice == 'higher' and user_number > computer_number) or (choice == 'lower' and user_number < computer_number):
-        print(f"You were right! The computer's number was {computer_number}")
-        +score
-        print(f"Your score is now {score}")
-    elif(choice != 'higher' or choice != 'lower'):
-        print('Please enter either higher or lower')
-    else:
-       print(f"Aww, that's incorrect. The computer's number was {computer_number }")
-    print('\n')
+    if choice != 'higher' or choice != 'lower':
+        input('Please enter either higher or lower: ')
